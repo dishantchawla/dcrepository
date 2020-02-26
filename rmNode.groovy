@@ -3,7 +3,7 @@ import org.apache.jackrabbit.oak.spi.commit.EmptyHook
 import org.apache.jackrabbit.oak.spi.state.NodeStore
 import org.apache.jackrabbit.oak.commons.PathUtils
 
-def rmNode(def path) {
+def rmNode(java.lang.String path) {
     println "Removing node ${path}"
 
     NodeStore ns = session.store

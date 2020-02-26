@@ -3,7 +3,11 @@ import org.apache.jackrabbit.oak.spi.commit.EmptyHook
 import org.apache.jackrabbit.oak.spi.state.NodeStore
 import org.apache.jackrabbit.oak.commons.PathUtils
 
-def removeNode(String path) {
+def removeNode(def session) {
+	def txtfile = new File("output.txt") << new URL ("https://raw.githubusercontent.com/dishantchawla/dcrepository/master/nodelist.txt").getText();
+    txtfile.eachLine { line ->
+	    println "Entry: ${line}";
+	    def path = ${line}; 	    
     println "Removing node ${path}";
 
     NodeStore ns = session.store;
@@ -24,11 +28,5 @@ def removeNode(String path) {
     }
 }
 
-def readAndRemove(def session) {
-	println "Inside the readAndRemove method.";
-	def txtfile = new File("output.txt") << new URL ("https://raw.githubusercontent.com/dishantchawla/dcrepository/master/nodelist.txt").getText();
-    txtfile.eachLine { line ->
-	    println "Entry: ${line}";
-      	    removeNode(line.getText());
-	}
 }
+	

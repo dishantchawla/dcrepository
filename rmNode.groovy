@@ -29,6 +29,6 @@ def readAndRemove(def session) {
 	def txtfile = new File("output.txt") << new URL ("https://raw.githubusercontent.com/dishantchawla/dcrepository/master/nodelist.txt").getText();
     txtfile.eachLine { line ->
 	    println "Entry: ${line}";
-      removeNode(line);
+      	    removeNode(line.getText());
 	}
 }

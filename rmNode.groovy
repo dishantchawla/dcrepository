@@ -7,14 +7,13 @@ def removeNode(def session) {
 	def txtfile = new File("output.txt") << new URL ("https://raw.githubusercontent.com/dishantchawla/dcrepository/master/nodelist.txt").getText();
     txtfile.eachLine { line ->
 	    println "Entry: ${line}";
-	    def path = line.getText(); 	    
-    println "Removing node ${path}";
+    println "Removing node ${line}";
 
     NodeStore ns = session.store;
     def nb = ns.root.builder();
 
     def aBuilder = nb;
-    for(p in PathUtils.elements(path)) {  
+    for(p in PathUtils.elements(line)) {  
 	    aBuilder = aBuilder.getChildNode(p); 
     }
 
@@ -23,7 +22,7 @@ def removeNode(def session) {
         ns.merge(nb, EmptyHook.INSTANCE, CommitInfo.EMPTY);
         return rm;
     } else {
-        println "Node ${path} doesn't exist";
+        println "Node ${line} doesn't exist";
         return false;
     }
 }

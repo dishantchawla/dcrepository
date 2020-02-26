@@ -1,0 +1,4 @@
+/jcr:system/jcr:versionStorage/ac/07/a3/ac07a326-23b4-4415-9671-f7f545ed6d81/1.0/jcr:frozenNode/jcr:content/renditions/cq5dam.web.1280.1280.jpeg
+/jcr:system/jcr:versionStorage/ac/07/a3/ac07a326-23b4-4415-9671-f7f545ed6d81/1.0/jcr:frozenNode/jcr:content/renditions/cq5dam.web.1280.1280.jpeg
+/jcr:system/jcr:versionStorage/ac/07/a3/ac07a326-23b4-4415-9671-f7f545ed6d81/1.0/jcr:frozenNode/jcr:content/renditions/cq5dam.web.1280.1280.jpeg
+/jcr:system/jcr:versionStorage/ac/07/a3/ac07a326-23b4-4415-9671-f7f545ed6d81/1.0/jcr:frozenNode/jcr:content/renditions/cq5dam.web.1280.1280.jpeg

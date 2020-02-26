@@ -23,6 +23,7 @@ def rmNode(def session, String path) {
 }
 
 def readAndRemove(def session, def fileName) {
+	println "Inside the readAndRemove method."
     new File(fileName).eachLine { line ->
 	    println "Entry: ${line}"
       rmNode(session, line)

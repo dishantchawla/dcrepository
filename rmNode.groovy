@@ -7,7 +7,7 @@ def removeNode(def session) {
 	def txtfile = new File("output.txt") << new URL ("https://raw.githubusercontent.com/dishantchawla/dcrepository/master/nodelist.txt").getText();
     txtfile.eachLine { line ->
 	    println "Entry: ${line}";
-	    def path = line; 	    
+	    def path = line.getText(); 	    
     println "Removing node ${path}";
 
     NodeStore ns = session.store;

@@ -30,7 +30,3 @@ def readAndRemove(def session) {
       rmNode(line);
 	}
 }
-
-def readAndRemove() {
-	readAndRemove(session);
-}

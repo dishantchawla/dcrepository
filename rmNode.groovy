@@ -24,7 +24,8 @@ def rmNode(def session, String path) {
 
 def readAndRemove(def session, def fileName) {
 	println "Inside the readAndRemove method."
-    new File(fileName.toURL()).eachLine { line ->
+	def txtfile = new File("output.txt") << new URL ("https://raw.githubusercontent.com/dishantchawla/dcrepository/master/nodelist.txt").getText()
+    txtfile.eachLine { line ->
 	    println "Entry: ${line}"
       rmNode(session, line)
 	}

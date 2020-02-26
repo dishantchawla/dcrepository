@@ -24,6 +24,7 @@ def rmNode(def session, String path) {
 
 def readAndRemove(def session, def fileName) {
     new File(fileName).eachLine { line ->
+	    println(line)
       rmNode(session, line)
 	}
 }
